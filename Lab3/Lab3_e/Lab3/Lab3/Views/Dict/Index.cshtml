@@ -1,0 +1,43 @@
+﻿@using Lab3.Models
+@model IEnumerable<Contact>
+
+@{ ViewBag.Title = "Index";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h2>Phone dictionary</h2>
+<hr />
+<form action="/Lab3/Dict/Add">
+    <button type="submit" class="btn">Add</button>
+</form>
+<br />
+<br />
+<section>
+    <table class="table" id="PhoneDict">
+        <thead>
+            <tr class="thead">
+                <td>Name</td>
+                <td>Phone</td>
+                <td colspan="2">Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+<tr>
+    <td>@item.Name</td>
+    <td>@item.Phone</td>
+    <td>
+        <form action="/Lab3/Dict/Update/@item.Id">
+            <button type="submit" class="btn">Edit</button>
+        </form>
+    </td>
+    <td>
+        <form action="/Lab3/Dict/Delete/@item.Id">
+            <button type="submit" class="btn">Delete</button>
+        </form>
+    </td>
+</tr>            }
+        </tbody>
+    </table>
+</section>
+

@@ -1,0 +1,43 @@
+﻿@model Lab3.Models.Contact
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Add</h2>
+
+@using (Html.BeginForm())
+{
+
+    <hr />
+    @Html.ValidationSummary(true)
+    <div class="">
+        @Html.LabelFor(model => model.Name)
+        <div class="">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name, "")
+        </div>
+    </div>
+
+    <div class="">
+        @Html.LabelFor(model => model.Phone)
+        <div class="">
+            @Html.EditorFor(model => model.Phone)
+            @Html.ValidationMessageFor(model => model.Phone, "")
+        </div>
+    </div>
+
+    <div class="">
+        <div>
+            <input type="submit" value="Add" />
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
