@@ -1,0 +1,24 @@
+﻿@model DBLibrary.Phone
+
+@{ ViewBag.Title = "Update"; }
+
+@section Header
+{
+    <header>
+        <h2>Update</h2>
+    </header>
+}
+
+@using Lab6.Helpers
+
+@Html.UpdatePhoneForm((object)Model)
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@section Footer
+{
+    <footer>
+    </footer>
+}

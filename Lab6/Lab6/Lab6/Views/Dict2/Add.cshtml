@@ -1,0 +1,25 @@
+﻿@model DBLibrary.Phone
+
+@{ ViewBag.Title = "Add"; }
+
+@section Header
+{
+    <header>
+        <h2>Add</h2>
+    </header>
+}
+
+@using Lab6.Helpers
+
+
+@Html.AddPhoneForm()
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@section Footer
+{
+    <footer>
+    </footer>
+}

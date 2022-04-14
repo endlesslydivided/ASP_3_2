@@ -23,7 +23,7 @@ namespace Lab1_client_A_
         {
             try
             {
-                Uri target = new Uri("https://localhost:44357/sum");
+                Uri target = new Uri("http://172.16.193.234:14499/Lab1/sum");
                 WebRequest request = WebRequest.Create(target);
                 string postData = "X=" + textBox1.Text + "&Y=" + textBox2.Text;
                 byte[] byteArray = Encoding.UTF8.GetBytes(postData);
